@@ -1,0 +1,220 @@
+/* font-family: 'Noto Serif Display', serif; in weights 200, 200i, 400, 400i, 800. 
+
+/ CSS HEX /
+--rosy-brown: #c4a69dff;
+--cambridge-blue: #98a886ff;
+--paynes-gray: #465c69ff;
+--space-cadet: #363457ff;
+--ultra-violet: #735290ff;
+
+/ CSS HSL /
+--rosy-brown: hsla(14, 25%, 69%, 1);
+--cambridge-blue: hsla(88, 16%, 59%, 1);
+--paynes-gray: hsla(202, 20%, 34%, 1);
+--space-cadet: hsla(243, 25%, 27%, 1);
+--ultra-violet: hsla(272, 27%, 44%, 1);
+
+/ SCSS HEX /
+$rosy-brown: #c4a69dff;
+$cambridge-blue: #98a886ff;
+$paynes-gray: #465c69ff;
+$space-cadet: #363457ff;
+$ultra-violet: #735290ff;
+
+/ SCSS HSL /
+$rosy-brown: hsla(14, 25%, 69%, 1);
+$cambridge-blue: hsla(88, 16%, 59%, 1);
+$paynes-gray: hsla(202, 20%, 34%, 1);
+$space-cadet: hsla(243, 25%, 27%, 1);
+$ultra-violet: hsla(272, 27%, 44%, 1);
+
+/ SCSS RGB /
+$rosy-brown: rgba(196, 166, 157, 1);
+$cambridge-blue: rgba(152, 168, 134, 1);
+$paynes-gray: rgba(70, 92, 105, 1);
+$space-cadet: rgba(54, 52, 87, 1);
+$ultra-violet: rgba(115, 82, 144, 1);
+
+/ SCSS Gradient /
+$gradient-top: linear-gradient(0deg, #c4a69dff, #98a886ff, #465c69ff, #363457ff, #735290ff);
+$gradient-right: linear-gradient(90deg, #c4a69dff, #98a886ff, #465c69ff, #363457ff, #735290ff);
+$gradient-bottom: linear-gradient(180deg, #c4a69dff, #98a886ff, #465c69ff, #363457ff, #735290ff);
+$gradient-left: linear-gradient(270deg, #c4a69dff, #98a886ff, #465c69ff, #363457ff, #735290ff);
+$gradient-top-right: linear-gradient(45deg, #c4a69dff, #98a886ff, #465c69ff, #363457ff, #735290ff);
+$gradient-bottom-right: linear-gradient(135deg, #c4a69dff, #98a886ff, #465c69ff, #363457ff, #735290ff);
+$gradient-top-left: linear-gradient(225deg, #c4a69dff, #98a886ff, #465c69ff, #363457ff, #735290ff);
+$gradient-bottom-left: linear-gradient(315deg, #c4a69dff, #98a886ff, #465c69ff, #363457ff, #735290ff);
+$gradient-radial: radial-gradient(#c4a69dff, #98a886ff, #465c69ff, #363457ff, #735290ff);
+
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* custom properties */
+
+:root {
+    --ff-primary: 'Noto Serif Display', serif;
+    --ff-secondary: 'Noto Serif Display', serif;
+
+    --fw-reg: 400;
+    --fw-bold: 800;
+
+    --clr-dppurp: #26253e;
+    --clr-mdpurp: #363457;
+    --clr-ltpurp: #735290;
+    --clr-dkteal: #323F4b;
+    --clr-truteal: #465C69;
+    --clr-oligreen: #6A795F;
+    --clr-palegreen: #98A886;
+    --clr-rosetaupe: #946C69;
+    --clr-rosetan: #C4A69D;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25), 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4rem;
+        --fs-h2: 3rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+/* General Styles */
+body {
+    background: white;
+    color: var(--clr-dppurp);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-boy);
+    line-height: 1.6;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+strong {
+    font-weight: var(--fw-bold);
+    color: var(--clr-rosetan);
+}
+/* Typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-reg);
+    line-height: 1.1;
+    margin: 0;
+}
+
+h1 {
+    font-size: var(--fs-h1);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+}
+h3 {
+    font-size: var(--fs-h3);
+}
+
+.section__title{
+    margin-bottom: .15em;
+}
+
+.section__title--intro {
+    font-weight: var(--fw-reg);
+}
+
+.section__title--intro strong {
+    display: block;
+}
+
+
+.section__subtitle{
+    margin: 0;
+    font-size: var(--fs-h3);
+
+}
+.section__subtitle--intro, 
+.section__subtitle--about {
+    background: var(--clr-rosetaupe);
+    padding: .25em 1em;
+    font-family: var(--ff-secondary);
+    margin-bottom: .5em;
+}
+
+/* header */
+
+nav {
+    display: none;
+}
+
+/* intro section */
+
+.intro {
+    position: relative;
+}
+
+section {
+    padding: 2em;
+} 
+
+.intro__img {
+    box-shadow: var(--bs);
+}
+
+ @media (min-width: 600px) { 
+   .intro {
+        display: grid; 
+        width: min-content;
+        margin: 0 auto; 
+        column-gap: 1em;
+        grid-template-areas: 
+            "img title"
+            "img subtitle";
+        grid-template-columns: min-content max-content;
+        padding: 3em;
+    } 
+    .intro__img {
+        grid-area: img;
+        min-width: 450px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .section__subtitle--intro {
+        align-self: start;
+        grid-column: -1 / 1;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -1.5em;
+        width: calc(100% + 1.5em);
+    }
+}
+
+.my-services {
+    background-color: var(--clr-dkteal);
+    background-image: url(../imgs/brightcodedesk.jpg);
+    background-size: cover;
+    background-blend-mode: overlay;
+    color: white;
+} 
